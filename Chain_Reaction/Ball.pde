@@ -1,4 +1,4 @@
-class Ball{
+class Ball {
   float x;
   float y;
   float rad;
@@ -15,11 +15,8 @@ class Ball{
     rad = 10;
     x = random((width-r) + r/2);
     y = random((height - r) + r/2);
-    ellipse(x,y,rad*2,rad*2);
-    fill(c);
     dx = random(10) - 5;
-    dy = random(10) - 5; 
-    state = 0;
+    dy = random(10) - 5;  
   }
   
   void move(){
@@ -36,6 +33,6 @@ class Ball{
       dx = -dx;
     }
   }
+  
+  
 }
-  
-  
