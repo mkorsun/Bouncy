@@ -20,9 +20,11 @@ class Ball {
   }
   
   void move(){
+    ellipseMode(RADIUS);
     x = x + dx;
     y = y + dy;
     bounce();
+    ellipse(x,y,rad,rad);
   }
   
   void bounce(){
