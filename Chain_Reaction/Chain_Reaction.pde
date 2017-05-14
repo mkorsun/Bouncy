@@ -11,7 +11,15 @@ void setup(){
 }
   
   void draw(){
-    for(Ball each:balls){
-      each.move();
+    background(0);
+    for(int i = 0; i < balls.length; i++){
+      
     }
+}
+
+void mousedClicked(){
+  if(!reactionStarted){
+    balls[0].x = mouseX;
+    balls[0].y = mouseY;
+  }
 }
