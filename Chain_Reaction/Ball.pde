@@ -32,16 +32,20 @@ class Ball {
     bounce();
     }
     else{
-      if(rad < OGrad * 4 && !HitMax){
+      if(rad < OGrad * 5 && !HitMax){
         rad +=1;
       }
-      if(rad == OGrad * 4){
+      if(rad == OGrad * 5){
         rad -= 1;
         HitMax = true;
       }
       if( HitMax && rad != 0){
         rad -=1;
       }
+      if (rad == 0){
+        state = 2;
+      }
+     
     }   
     ellipse(x,y,rad,rad);
     fill(c);

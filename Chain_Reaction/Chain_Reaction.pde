@@ -13,14 +13,23 @@
       void draw(){
         background(0);
         for(int i = 0; i < balls.length; i++){
-          for( int q = 0; q < balls.length; q++){
-            if(colliding(balls[i], balls[q]) && reactionStarted && balls[q].state == 1){
-              balls[i].state = 1;
-              q += balls.length;
+          if(balls[i]!= null){
+            for( int q = 0; q < balls.length; q++){
+              if(balls[q] != null){
+                if(colliding(balls[i], balls[q]) && reactionStarted && balls[q].state == 1){
+                  balls[i].state = 1;
+                  q += balls.length;
+                }
+              }
             }
+          if(balls[i].state == 2){
+            balls[i] = null;
           }
-          balls[i].move(); 
-          fill(balls[i].c);
+          else{
+            balls[i].move(); 
+            fill(balls[i].c);
+          }
+        }
         }
     }
   
