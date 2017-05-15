@@ -28,11 +28,11 @@ class Ball {
   }
   
   void bounce(){
-    if(y == height || y == 0){
-      dy = -dy;
+    if(y > height || y <rad){
+      dy *= -1;
     }
-    if(x == width || x == 0){
-      dx = -dx;
+    if(x > width || x < rad){
+      dx *= -1;
     }
   }
   
