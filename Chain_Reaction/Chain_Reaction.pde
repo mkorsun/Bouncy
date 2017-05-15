@@ -19,7 +19,8 @@
               q += balls.length;
             }
           }
-          balls[i].move();             
+          balls[i].move(); 
+          fill(balls[i].c);
         }
     }
   
