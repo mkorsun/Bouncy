@@ -32,10 +32,10 @@ class Ball {
     bounce();
     }
     else{
-      if(rad < OGrad * 2 && !HitMax){
+      if(rad < OGrad * 4 && !HitMax){
         rad +=1;
       }
-      if(rad == OGrad * 2){
+      if(rad == OGrad * 4){
         rad -= 1;
         HitMax = true;
       }
